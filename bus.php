@@ -33,7 +33,7 @@ do {
 
   $conn->beginTransaction();
   foreach ($busInfo as $info) {
-    $query = "INSERT INTO bus (ProviderID, StationID, BusID, CarType, CarID, DutyStatus, BusStatus, RouteID, GoBack, StopID, CarOnStop, DataTime) VALUES (".$info['ProviderID'].", ".$info['StationID'].", '".$info['BusID']."', ".$info['CarType'].", ".$info['CarID'].", ".$info['DutyStatus'].", ".$info['BusStatus'].", ".$info['RouteID'].", ".$info['GoBack'].", ".$info['StopID'].", ".$info['CarOnStop'].", '".$info['DataTime']."')";
+    $query = "INSERT INTO bus (`ProviderID`, `StationID`, `BusID`, `CarType`, `CarID`, `DutyStatus`, `BusStatus`, `RouteID`, `GoBack`, `StopID`, `CarOnStop`, `DataTime`) VALUES (".$info['ProviderID'].", ".$info['StationID'].", '".$info['BusID']."', ".$info['CarType'].", ".$info['CarID'].", ".$info['DutyStatus'].", ".$info['BusStatus'].", ".$info['RouteID'].", ".$info['GoBack'].", ".$info['StopID'].", ".$info['CarOnStop'].", '".$info['DataTime']."')";
     $conn->exec($query);
   }
   $conn->commit();
